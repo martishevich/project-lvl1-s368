@@ -6,3 +6,6 @@ start:
 
 publish:
 	npm publis
+
+lint:
+	npx eslint .
