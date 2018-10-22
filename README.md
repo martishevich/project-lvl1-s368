@@ -1,2 +1,2 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/c25f2e03dfdc9fa45b24/maintainability)](https://codeclimate.com/github/martishevich/project-lvl1-s368/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c25f2e03dfdc9fa45b24/test_coverage)](https://codeclimate.com/github/martishevich/project-lvl1-s368/test_coverage)
+[![Build Status](https://travis-ci.org/martishevich/project-lvl1-s368.svg?branch=master)](https://travis-ci.org/martishevich/project-lvl1-s368)
