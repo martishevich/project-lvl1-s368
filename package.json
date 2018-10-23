@@ -1,9 +1,10 @@
 {
   "name": "spb-brain-game",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Hexlet first course",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "files": [
     "dist"
