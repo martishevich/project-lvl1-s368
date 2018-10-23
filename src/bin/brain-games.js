@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import askName from '..';
+import { askName } from '../helpers';
 
-console.log('Welcome to the Brain Games!');
 askName();
