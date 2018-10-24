@@ -10,3 +10,4 @@ export const askName = () => {
   console.log(`Hello, ${name}!`);
   return name;
 };
+export const getRandomIntNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
