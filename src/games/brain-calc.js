@@ -2,25 +2,20 @@ import engine from '../engine';
 import getRandomIntNumber from '../helpers';
 
 const description = 'What is the result of the expression?';
-const getRightAnswer = (question) => {
-  const questionArray = question.split(' ');
-  const firstNumber = parseInt(questionArray[0], 10);
-  const sign = questionArray[1];
-  const secondNumber = parseInt(questionArray[2], 10);
-
+const getRightAnswer = (x, y, sign) => {
   let result;
   switch (sign) {
     case '+':
-      result = firstNumber + secondNumber;
+      result = x + y;
       break;
     case '-':
-      result = firstNumber - secondNumber;
+      result = x - y;
       break;
     case '*':
-      result = firstNumber * secondNumber;
+      result = x * y;
       break;
     default:
-      result = firstNumber + secondNumber;
+      result = x + y;
   }
   return result.toString();
 };
@@ -28,19 +23,15 @@ const getRightAnswer = (question) => {
 const operators = ['+', '-', '*'];
 const getSign = () => operators[getRandomIntNumber(0, operators.length)];
 
-const getQuestion = () => {
-  const firstNumber = getRandomIntNumber(0, 20);
-  const secondNumber = getRandomIntNumber(0, 20);
-  const sign = getSign();
-
-  return `${firstNumber} ${sign} ${secondNumber}`;
-};
-
 const getData = () => {
-  const question = getQuestion();
+  const x = getRandomIntNumber(0, 20);
+  const y = getRandomIntNumber(0, 20);
+  const sign = getSign();
+  const question = `${x} ${sign} ${y}`;
+
   return {
     question,
-    answer: getRightAnswer(question),
+    answer: getRightAnswer(x, y, sign),
   };
 };
 
