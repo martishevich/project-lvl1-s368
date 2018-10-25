@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import { askName } from '../helpers';
+import askName from '../general';
 
 askName();

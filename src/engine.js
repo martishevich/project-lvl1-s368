@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { askName } from './helpers';
+import askName from './general';
 
 const successNumber = 3;
 
