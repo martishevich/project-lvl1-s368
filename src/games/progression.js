@@ -1,5 +1,5 @@
 import engine from '../engine';
-import getRandomIntNumber from '../utils';
+import { getRandomIntNumber } from '../utils';
 
 const description = 'What number is missing in this progression?';
 const size = 10;

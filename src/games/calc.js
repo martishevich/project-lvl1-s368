@@ -1,5 +1,5 @@
 import engine from '../engine';
-import getRandomIntNumber from '../utils';
+import { getRandomIntNumber } from '../utils';
 
 const description = 'What is the result of the expression?';
 const getRightAnswer = (x, y, sign) => {
