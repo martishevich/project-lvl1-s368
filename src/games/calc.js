@@ -1,5 +1,5 @@
 import engine from '../engine';
-import getRandomIntNumber from '../helpers';
+import getRandomIntNumber from '../utils';
 
 const description = 'What is the result of the expression?';
 const getRightAnswer = (x, y, sign) => {
@@ -28,11 +28,9 @@ const getData = () => {
   const y = getRandomIntNumber(0, 20);
   const sign = getSign();
   const question = `${x} ${sign} ${y}`;
+  const answer = getRightAnswer(x, y, sign);
 
-  return {
-    question,
-    answer: getRightAnswer(x, y, sign),
-  };
+  return { question, answer };
 };
 
 export default () => {
