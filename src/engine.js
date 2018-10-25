@@ -1,23 +1,21 @@
 import readlineSync from 'readline-sync';
-import { greeting, askName } from './helpers';
+import { askName } from './helpers';
 
 const successNumber = 3;
 
-export default (description, getQuestion, getRightAnswer) => {
-  greeting();
+export default (description, getData) => {
+  console.log('Welcome to the Brain Games!');
   console.log(description);
   const name = askName();
   for (let i = 0; i < successNumber; i += 1) {
-    const question = getQuestion();
-    const rightAnswer = getRightAnswer(question);
-    console.log(`Question: ${question}`);
+    const data = getData();
+    console.log(`Question: ${data.question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer !== rightAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'`);
-      return 0;
+    if (answer !== data.answer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${data.answer}'`);
+      return;
     }
     console.log('Correct!');
   }
   console.log(`Congratulations, ${name}`);
-  return 0;
 };

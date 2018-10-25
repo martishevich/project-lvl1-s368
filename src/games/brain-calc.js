@@ -36,6 +36,14 @@ const getQuestion = () => {
   return `${firstNumber} ${sign} ${secondNumber}`;
 };
 
+const getData = () => {
+  const question = getQuestion();
+  return {
+    question,
+    answer: getRightAnswer(question),
+  };
+};
+
 export default () => {
-  engine(description, getQuestion, getRightAnswer);
+  engine(description, getData);
 };
