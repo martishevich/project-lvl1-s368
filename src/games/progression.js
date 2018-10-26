@@ -11,9 +11,9 @@ const getData = () => {
   const progression = [...Array(size).keys()]
     .map(i => (firstNumber + i * step).toString());
 
-  const hiddenNumber = getRandomIntNumber(1, size);
-  const answer = progression[hiddenNumber];
-  progression[hiddenNumber] = '..';
+  const hiddenNumberPosition = getRandomIntNumber(1, size);
+  const answer = progression[hiddenNumberPosition];
+  progression[hiddenNumberPosition] = '..';
   const question = progression.join(' ');
 
   return { question, answer };
